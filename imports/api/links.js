@@ -16,16 +16,13 @@ Meteor.methods({
             throw new Meteor.Error('not-authorized')
         }
 
-        try {
-            new SimpleSchema({
-                url: {
-                    type: String,
-                    regEx: SimpleSchema.RegEx.Url
-                }
-            }).validate({ url })
-        } catch(e) {
-            throw new Meteor.Error(400, e.message)
-        }
+        new SimpleSchema({
+            url: {
+                type: String,
+                label: 'Your link is invalid',
+                regEx: SimpleSchema.RegEx.Url
+            }
+        }).validate({ url })
 
         Links.insert({
             url,
