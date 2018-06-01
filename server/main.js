@@ -18,18 +18,6 @@ Meteor.startup(() => {
         } else {
             next()
         }
-
     })
 
-    WebApp.connectHandlers.use((req, res, next) => {
-        console.log('this is from my custom middleware')
-        console.log(req.url, req.method, req.headers, req.query)
-
-        // res.statusCode = 404
-        // res.setHeader('my-custom-header', 'Amin was here')
-        // res.write('<h1>This is my middle at work!</h1>')
-        // res.end()
-
-        next()
-    })
 })
