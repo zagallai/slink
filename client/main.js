@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { Tracker } from 'meteor/tracker'
 
 import { routes, onAuthChange } from './../imports/routes/routes'
+import { links } from './../imports/api/links'
 
 Tracker.autorun(() => {
     //double not to make sure truthy data
