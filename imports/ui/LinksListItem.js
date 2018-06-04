@@ -1,4 +1,4 @@
-Meteor
+import { Meteor } from 'meteor/meteor'
 import React from 'react'
 import Clipboard from 'clipboard'
 
